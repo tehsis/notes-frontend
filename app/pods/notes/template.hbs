@@ -1,0 +1,6 @@
+<ul>
+<li>{{input type="text" id="new-note" placeholder="Add a new note..." value=newMessage action="createNote"}}</li>
+{{#each note in model}}
+  {{bn-note note=note}}
+{{/each}}
+</ul>

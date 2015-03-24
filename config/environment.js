@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'betternotes-front',
+    podModulePrefix: 'betternotes-front/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -20,6 +21,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.apiHost = 'http://localhost:3000'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
