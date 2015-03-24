@@ -2,9 +2,6 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
   actions: {
-    updateNote: function(note) {
-      note.save();
-    },
     createNote: function() {
       let message = this.get('newMessage');
       if (!message.trim()) {return;}
@@ -16,9 +13,6 @@ export default Ember.ArrayController.extend({
       this.set('newMessage', '');
 
       note.save();
-    },
-    deleteNote: function(note) {
-      note.destroyRecord();
     }
   }
 });
